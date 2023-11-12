@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>The Coffee House</title>
+</head>
+<body>
+   
+    
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#">The Coffee House</a>
+                </div>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul class="menu">
+                    <li><a href="#">TRANG CHỦ</a></li>
+                    <li><a href="#">SẢN PHẨM</a>
+                        <ul class="submenu">
+                            <li><a href="#">Sản phẩm 1</a></li>
+                            <li><a href="#">Sản phẩm 2</a></li>
+                            <li><a href="#">Sản phẩm 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">DANH MỤC</a></li>
+                    <li><a href="#">GIỎ HÀNG</a></li>
+                    <li><a href="#">LIÊN HỆ</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!-- Content goes here -->
+    
+        
+    </body>
+    </html>
+
+    <!-- Content goes here -->
+
+   
+
+
+<style>
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+}
+
+.submenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.submenu ul li {
+    margin-right: 0;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .menu {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+    }
+
+    input[type="checkbox"]:checked + .menu {
+        display: flex;
+    }
+
+    .menu li {
+        margin-right: 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+</style>
+
+
+<script>
+        // script.js
+function toggleSubmenu() {
+    var submenu = document.querySelector('.submenu');
+    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
+
+var menuItem = document.querySelector('.dropdown');
+menuItem.addEventListener('click', toggleSubmenu);
+
+</script>
