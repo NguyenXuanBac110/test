@@ -1,10 +1,8 @@
 <?php
 $html_dssp_new = showsp($dssp_new);
 $html_dssp_best = showsp($dssp_best);
-
 $html_dssp_caphe = showsp($dssp_caphe);
 $html_dssp_tra = showsp($dssp_tra);
-$html_dssp_banh = showsp($dssp_banh);
 
 ?>
 
@@ -14,7 +12,6 @@ $html_dssp_banh = showsp($dssp_banh);
 <section class="containerfull">
     <div class="container">
         <h1>SẢN PHẨM HOT</h1><br>
-        <html>test</html>
         <div class="containerfull">
             <div class="box50 mr15">
                 <img src="layout/images/banner2.webp" alt="">
@@ -26,8 +23,6 @@ $html_dssp_banh = showsp($dssp_banh);
             <h1>SẢN PHẨM MỚI</h1><br>
             <?= $html_dssp_new; ?>
         </div>
-
-        
 
     </div>
 </section>
@@ -43,12 +38,9 @@ $html_dssp_banh = showsp($dssp_banh);
         <div class="row">
             <h2>Trà</h2>
         </div>
-        <?= $html_dssp_tra ?>
         <div class="row">
-            <h2>Bánh</h2>
+            <?= $html_dssp_tra ?>
         </div>
-        <?= $html_dssp_banh ?>
-
 
     </div>
 </section>

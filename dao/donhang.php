@@ -59,6 +59,7 @@ function show_dh_new($dssp)
     extract($sp);
     $html_dssp .= '<tr>
    <td>' . $madh . '</td>
+   <td>' . $trangthai . '</td>
 </tr>';
   }
   return $html_dssp;

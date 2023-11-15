@@ -14,11 +14,11 @@ include "dao/user.php";
 include "dao/donhang.php";
 include "dao/binhluan.php";
 //data danh cho trang chu
+$dssp_all =selectall_sanpham();
 $dssp_new = get_dssp_new(10);
-$dssp_best = get_dssp_best(2);
+$dssp_best = get_dssp_best(4);
 $dssp_caphe = get_sp_caphe(4);
 $dssp_tra = get_sp_tra(4);
-$dssp_banh = get_sp_banh(4);
 
 if (!isset($_GET['pg'])) {
     include "view/home.php";
@@ -182,7 +182,7 @@ if (!isset($_GET['pg'])) {
                 } else {
                     $email = $_POST['email'];
                 }
-                user_insert($username, $password, $email,$anh);
+                user_insert($username, $password, $email);
             }
             break;
         case 'dangxuat':
@@ -208,9 +208,6 @@ if (!isset($_GET['pg'])) {
             if (isset($_SESSION['s_user']) && ($_SESSION['s_user'] > 0)) {
                 include "view/myaccount.php";
             }
-            break;
-        case 'doipass':
-            include "view/doipass.php";
             break;
         case 'updatauser':
             if (isset($_POST['capnhat']) && ($_POST["capnhat"])) {

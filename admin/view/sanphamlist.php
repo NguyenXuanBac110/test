@@ -13,7 +13,6 @@ $html_sanphamlist = showsp_admin($sanphamlist);
                 <th>Hình</th>
                 <th>Tên SP</th>
                 <th>Giá</th>
-
                 <th>Thao Tác</th>
             </tr>
         </thead>
@@ -26,8 +25,7 @@ $html_sanphamlist = showsp_admin($sanphamlist);
                 <th>ID</th>
                 <th>Hình</th>
                 <th>Tên SP</th>
-                <th>Giá</th>
- 
+                <th>Giá</th>        
                 <th>Thao Tác</th>
             </tr>
         </tfoot>

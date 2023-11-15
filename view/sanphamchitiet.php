@@ -1,7 +1,7 @@
 <?php
 $html_dm = showdm($dsdm);
 extract($spchitiet);
-$imgn = IMG_PATH_USER . $img;
+$imgn = IMG_PATH_USER . $ten_hinh;
 $html_sp_lienquan = showsp($splienquan);
 
 ?>
@@ -101,7 +101,7 @@ $html_sp_lienquan = showsp($splienquan);
                             </div>
                         </div>
                         <input type="hidden" name="idpro" value="<?= $id ?>">
-                        <input type="hidden" name="img" value="<?= $img ?>">
+                        <input type="hidden" name="img" value="<?= $ten_hinh ?>">
                         <div class="click_mua">
                             <button class="addtocart__btn" name="addcart">THÊM GIỎ HÀNG</button>
                         </div>

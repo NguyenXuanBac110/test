@@ -1,8 +1,6 @@
 <?php
     $html_dm=showdm($dsdm);
     $html_dssp=showsp($dssp);
-
-    
     if($titlepage!="") $title =$titlepage;
     else  $title ="Sản Phẩm";
 ?>

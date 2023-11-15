@@ -16,16 +16,11 @@ if (isset($_POST['guibinhluan'])) {
     $hoten = $_SESSION['s_user']['username'];
     binhluan_insert( $noidung, $ngaybl,$idpro,$iduser);
 }
-$dsbl = binhluan_select_all();
+$dsbl = binhluan_sp($_GET['idpro']);
 $html_bl = "";
 foreach ($dsbl as $bl) {
     extract($bl);
-    $html_bl .= '<p class="bl" > 
-    <div>
-    <img class="avata" src="../layout/images/avata.jpg" alt="">  
-    <div class="name">  ' .$hoten. ' - (' . $ngaybl . ')
-    </div>
-    </div>
+    $html_bl .= '<p class="bl" > <div><img class="avata" src="../layout/images/avata.jpg" alt="">  <div class="name">  ' . $username. ' - (' . $ngaybl . ')</div></div>
 
      <p> ' . $noidung . '</p>
     </p> 
@@ -40,9 +35,12 @@ foreach ($dsbl as $bl) {
 
 <?php
 if (isset($_SESSION['s_user']) && (count($_SESSION['s_user']) > 0)) {
+
+
     ?>
-    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-        <input type="hidden" name="idpro">
+
+    <form action="/du_an_mau_2023aa/du_an_mau_2023/view/binhluan.php?idpro=<?=$_GET['idpro'] ?>" method="post">
+        <input type="hidden" name="idpro" value="<?=$_GET['idpro'];?>">                                                                            
         <textarea name="noidung" id="" cols="100" rows="5" required></textarea> <br>
         <button type="submit" name="guibinhluan">Gửi bình luận</button>
     </form>

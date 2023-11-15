@@ -30,7 +30,6 @@ function viewcart()
         $i++;
     }
     return $html_cart;
-    
 }
 
 

@@ -48,7 +48,7 @@ $html_cart = viewcart();
                 </h3>
             </div>
             <a href="index.php?pg=donhang">
-                <button>Đặt Hàng</button>
+                <button> Tiếp tục thanh toán</button>
             </a>
         </div>
 
@@ -100,40 +100,3 @@ $html_cart = viewcart();
         background-color: #cc0000;
     }
 </style>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const decrementButtons = document.querySelectorAll('.decrement');
-        const incrementButtons = document.querySelectorAll('.increment');
-
-        decrementButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const productId = this.getAttribute('data-id');
-                const quantityElement = this.nextElementSibling;
-
-                let currentQuantity = parseInt(quantityElement.innerText);
-                if (currentQuantity > 1) {
-                    currentQuantity--;
-                    quantityElement.innerText = currentQuantity;
-                    updateTotal(productId, currentQuantity);
-                }
-            });
-        });
-
-        incrementButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const productId = this.getAttribute('data-id');
-                const quantityElement = this.previousElementSibling;
-
-                let currentQuantity = parseInt(quantityElement.innerText);
-                currentQuantity++;
-                quantityElement.innerText = currentQuantity;
-                updateTotal(productId, currentQuantity);
-            });
-        });
-
-        function updateTotal(productId, newQuantity) {
-            // You need to update the total here, either by interacting with the backend via AJAX or recalculating the total in the frontend.
-            // This might involve sending an AJAX request to update the cart and retrieve the new total.
-        }
-    });
-</script>

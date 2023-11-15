@@ -7,7 +7,7 @@ $html_cart=  show_donhang_user($bill);
 ?>
 
 <div class="containerfull">
-        <div class="bgbanner">BILL</div>
+        <div class="bgbanner">Giỏ Hàng</div>
     </div>
 
     <section class="containerfull">

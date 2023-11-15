@@ -9,7 +9,8 @@
     <div class="container">
         <div class="boxleft mr2pt menutrai">
             <h2>DÀNH CHO BẠN</h2><br><br>
-            <a href="#">bạn chưa có tài khoản</a>
+            <a href="#">Cập Nhật Thông Tin</a>
+            <a href="#">Lịch Sủ Mua Hàng</a>
             <a href="#">Thoát</a>
         </div>
         <div class="boxright">

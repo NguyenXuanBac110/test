@@ -27,8 +27,12 @@ function binhluan_select_all(){
     $sql = "SELECT * FROM binhluan ORDER BY id  DESC";
     return pdo_query($sql);
 }
-function binhluan_tk($idsp){
-$sql = "SELECT * FROM binhluan WHERE idpro = $idsp";
+
+function binhluan_sp($idsp){
+    $sql = "SELECT binhluan.id as idbl, binhluan.idpro, binhluan.ngaybl, binhluan.noidung,
+    user.id , user.username
+    FROM binhluan
+    INNER JOIN user ON binhluan.iduser = user.id Where binhluan.idpro = $idsp ORDER BY binhluan.id DESC";
     return pdo_query($sql);
 }
 

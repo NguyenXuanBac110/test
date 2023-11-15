@@ -1,7 +1,4 @@
 <?php
-$html_dssp_new = showsp($dssp_new);
-$html_dssp_best = showsp($dssp_best);
-$html_dssp_view = showsp($dssp_view);
 $html_dssp_caphe = showsp($dssp_caphe);
 $html_dssp_tra = showsp($dssp_tra);
 ?>

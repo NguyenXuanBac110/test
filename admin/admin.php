@@ -68,11 +68,19 @@ if (isset($_SESSION['user']) && ($_SESSION['user']["role"] == 1)) {
                     $name = $_POST['name'];
                     $price = $_POST['price'];
                     $iddm = $_POST['iddm'];
-
-                    $img = $_FILES['image']['name'];
-                    $target_file = IMG_PATH_ADMIN . $img;
-                    move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
-                    sanpham_insert($name, $img, $price, $iddm);
+                    $imgs = $_FILES['image'];
+                    $size = $_POST['size'];                 
+                    $soluong = $_POST['soluong'];             
+                    for ($i = 0; $i < count($imgs['name']); $i++) {
+                        $target_file = IMG_PATH_ADMIN . $imgs['name'][$i];
+                        move_uploaded_file($imgs['tmp_name'][$i], $target_file);
+                    }
+                    // echo''. $name .''. $price .''.$iddm;
+                    // echo'<pre>';
+                    // print_r($imgs['name']);
+                    // echo'<pre>';
+                    // die();
+                    sanpham_insert($name, $price, $iddm, $imgs['name'], $size, $soluong);
                     $sanphamlist = get_dssp_new(100);
                     include('view/sanphamlist.php');
                 } else {
@@ -156,30 +164,25 @@ if (isset($_SESSION['user']) && ($_SESSION['user']["role"] == 1)) {
                 include("view/donghanglist.php");
                 break;
             case "thongke":
-                $tk_hh = thong_ke_hang_hoa();
-                $tk_bl = thong_ke_binh_luan();
+                $tk_hh =thong_ke_hang_hoa();
+                $tk_bl =thong_ke_binh_luan();
                 include("view/thongke.php");
                 break;
             case "tcthongkesp":
-                if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
-                    $tk_hhct = get_sp_iddm($_GET['iddm']);
+                if (isset($_GET['iddm'])&& ($_GET['iddm']>0)) {
+                    $tk_hhct =get_sp_iddm($_GET['iddm']);
                 }
                 include("view/thongkespct.php");
                 break;
             case "thongkebl";
-                if (isset($_GET['idpro']) && ($_GET['idpro'] > 0)) {
-                    $tk_blct = show_binhluan_tk($_GET['idpro']);
+                if (isset($_GET['idpro'])&& ($_GET['idpro']>0)) {
+                    $tk_blct =show_binhluan_tk($_GET['idpro']);
                 }
                 include("view/thongkeblct.php");
-                break;
-            case "binhluan";
-                include("view/binhluan.php");
                 break;
             default:
                 include("view/home.php");
                 break;
-
-
         }
     } else {
         include("view/home.php");

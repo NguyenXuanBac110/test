@@ -4,17 +4,19 @@ if(isset($_SESSION['s_user'])&&($_SESSION['s_user']>0)){
 }
 ?>
 <div class="containerfull">
-    <div class="bgbanner">Thông tin tài khoản</div>
+    <div class="bgbanner">Thay đổi mật khẩu</div>
 </div>
 
 <section class="containerfull">
     <div class="container">
         <div class="boxleft mr2pt menutrai">
             <h2>DÀNH CHO BẠN</h2><br><br>
-
+            <a href="#">Cập Nhật Thông Tin</a>
+            <a href="#">Lịch Sủ Mua Hàng</a>
             <a href="#">Thoát</a>
         </div>
         <div class="boxright">
+            <h1>Đăng Kí</h1><br>
             <div class="containerfull mr30">
                 <form action="index.php?pg=updatauser" method="post" >
                     <div class="row">
@@ -63,10 +65,9 @@ if(isset($_SESSION['s_user'])&&($_SESSION['s_user']>0)){
                     <br>
                     <div class="row">
                         <input type="hidden" name="id" value="<?=$id?>" >
-                        <input type="submit" class="dksm" name="capnhat" value="cập nhật">
+                        <input type="submit" class="dksm" name="capnhat" value="Submit">
                     </div>
                 </form>
-                <a href="index.php?pg=doipass"><input type="submit" class="dksm" name="doipass" value="đổi mật khẩu" ></a>
             </div>
         </div>
 

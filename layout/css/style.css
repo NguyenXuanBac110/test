@@ -104,7 +104,6 @@ body {
     width: 25%;
     width: calc(25% - 30px);
     position: relative;
-    margin-top: 75px;
 }
 
 .best {

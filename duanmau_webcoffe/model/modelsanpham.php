@@ -1,6 +1,8 @@
 <?php
     function selectall_sanpham() {
-        $sql = "SELECT * FROM sanpham WHERE 1 ORDER BY id DESC";
+        $sql = "SELECT sanpham.id, sanpham.name, sanpham.price, sanpham.iddm, sanpham.mota, hinhsanpham.ma_hinh, hinhsanpham.ten_hinh
+        FROM sanpham
+        INNER JOIN hinhsanpham ON sanpham.id = hinhsanpham.masp;";
         $result = pdo_query($sql);
         return $result;
     }

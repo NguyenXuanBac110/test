@@ -13,7 +13,7 @@ $html_danhmuclist = showdm_admin_list( $danhmuc_list);
                         <tr>
                             <th>STT</th>
                             <th>Name</th>
-                            <th>Thao tác</th>
+                            <th>Thao Tác</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -21,12 +21,13 @@ $html_danhmuclist = showdm_admin_list( $danhmuc_list);
                       <?= $html_danhmuclist?>
                        
                     </tbody>
-                    <!-- <tfoot>
+                    <tfoot>
                         <tr>
                         <th>STT</th>
                         <th>Name</th>
+                        <th>Thao Tác</th>
                         </tr>
-                    </tfoot> -->
+                    </tfoot>
                 </table>
             </div>
         </div>

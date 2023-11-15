@@ -20,6 +20,7 @@ $user = $_SESSION["user"]["username"];
     </script>
     <link rel="stylesheet" href="layout/assets/css/main.css">
     <script src="https://kit.fontawesome.com/8c204d0fdf.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -27,7 +28,7 @@ $user = $_SESSION["user"]["username"];
     <div class="container-fluid main-page">
 
         <div class="app-main">
-            <nav class="sidebar " style="background-color: #a27f54;    box-shadow: 0px 0px 10px 0px black">
+            <nav class="sidebar " hidden style="background-color: #a27f54;    box-shadow: 0px 0px 10px 0px black">
                 <ul>
                     <li>
                         <a href="admin.php"><i class="fa-solid fa-house ico-side"></i>Dashboards</a>
@@ -42,15 +43,11 @@ $user = $_SESSION["user"]["username"];
                         <a href="admin.php?pg=sanphamlist"><i class="fa-solid fa-mug-hot ico-side"></i>Quản lí sản phẩm</a>
                     </li>
                     <li>
-                        <a href="admin.php?pg=binhluan"><i class="fa-solid fa-comment ico-side"></i>Quản lí Bình Luận</a>
-                    </li>
-                    <li>
                         <a href="admin.php?pg=users"><i class="fa-solid fa-user ico-side"></i>Quản lí thành viên</a>
                     </li>
                     <li>
                         <a href="admin.php?pg=thongke"><i class="fa-solid fa-chart-simple ico-side"></i>Thống kê</a>
                     </li>
-                    
                     <li>
                         <a href="admin.php?pg=dangxuat"><i class="fa-solid fa-user ico-side"></i>Đăng Xuất</a>
                     </li>
