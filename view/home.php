@@ -14,6 +14,7 @@ $html_dssp_banh = showsp($dssp_banh);
 <section class="containerfull">
     <div class="container">
         <h1>SẢN PHẨM HOT</h1><br>
+        <html>test</html>
         <div class="containerfull">
             <div class="box50 mr15">
                 <img src="layout/images/banner2.webp" alt="">
